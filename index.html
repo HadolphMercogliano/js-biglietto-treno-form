@@ -31,34 +31,59 @@
 </head>
 
 <body>
-    <form class="mt-5 ms-5" action="#" method="get">
-        <!-- NOME E COGNOME -->
-        <input type="text" id="nome_cognome" required>
-
-        <!-- KM DA PERCORRERE -->
-        <input type="number" id="kilometri" required>
-
-        <!-- FASCIA D'ETà -->
-        <select name="age" id="age" required>
-            <option value="">--Please choose an option--</option>
-            <option value="maggiorenne">Maggiorenne</option>
-            <option value="minorenne">Minorenne</option>
-            <option value="over65">Over65</option>
-        </select>
-        <button type="button">Calcola</button>
-        <button type="reset">Annulla</button>
+    <form class="mt-5 ms-5 container" action="#" method="get">
+        <div class="row">
+            <!-- NOME E COGNOME -->
+            <div class="col">
+                <label class="mb-3" for="nome_cognome"> Nome e Cognome</label><br>
+                <input type="text" id="nome_cognome" required>
+            </div>
+            <!-- KM DA PERCORRERE -->
+            <div class="col">
+                <label class="mb-3" for="kilometri">Km da percorrere</label><br>
+                <input type="number" id="kilometri" required>
+            </div>
+            <!-- FASCIA D'ETà -->
+            <div class="col">
+                <label class="mb-3" for="age"> Fascia d'età</label>
+                <select name="age" id="age" required>
+                    <option value="">--Please choose an option--</option>
+                    <option value="maggiorenne">Maggiorenne</option>
+                    <option value="minorenne">Minorenne</option>
+                    <option value="over65">Over65</option>
+                </select>
+            </div>
+            <div class="d-flex justify-content-center mt-4">
+                <button class="m-2 btn py-1 px-2 btn-primary" type="button">Calcola</button>
+                <button class="m-2 btn py-1 px-2 btn-secondary" type="reset">Annulla</button>
+            </div>
+        </div>
     </form>
+
     <!-- RISULTATO BIGLIETTO  -->
     <section>
-        <h1 class="text-center mt-4">Il tuo Biglietto</h1>
-        <div>
-            <h2>DETTAGLIO PASSEGGERO</h2>
-            <h2>NOME PASSEGGERO</h2>
-            <span id="passeggero"></span>
-        </div>
-        <div>
-            <h3>Costo biglietto</h3>
-            <span id="final_price"></span>
+        <div class="container">
+            <h1 class="text-center mt-4">Il tuo Biglietto</h1>
+            <div class="row my-3">
+                <h2>DETTAGLIO PASSEGGERO</h2>
+                <div class="col-4">
+                    <h5 class="fw-bold">NOME PASSEGGERO</h5>
+                    <span id="passeggero"></span>
+                </div>
+
+                <div class="col">
+                    <h5 class="fw-semi-bold ">Carrozza</h5>
+                    <span>5</span>
+                </div>
+                <div class="col">
+                    <h5 class="fw-semi-bold ">Codice CP</h5>
+                    <span>92911</span>
+                </div>
+                <div class="col">
+                    <h5 class="fw-semi-bold ">Costo biglietto</h5>
+                    <span id="final_price"></span>
+                </div>
+            </div>
         </div>
     </section>
 </body>

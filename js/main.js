@@ -47,6 +47,8 @@ switch (age) {
         document.getElementById('passeggero').innerHTML = ('Offerta Over65');
         break;
 }
-document.getElementById('final_price').innerHTML = (final_price + '€');
+const calculate_button = document.querySelector(".btn-primary")
+console.log(calculate_button);
+document.getElementById('final_price').innerHTML = (final_price.toFixed(2) + '€');
 
 

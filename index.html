@@ -33,21 +33,29 @@
 <body>
     <form class="mt-5 ms-5" action="#" method="get">
         <!-- NOME E COGNOME -->
-        <input type="text" id="nome_cognome">
+        <input type="text" id="nome_cognome" required>
 
         <!-- KM DA PERCORRERE -->
-        <input type="text" id="kilometri">
+        <input type="number" id="kilometri" required>
 
         <!-- FASCIA D'ETà -->
-        <select name="pets" id="pet-select">
+        <select name="age" id="age" required>
             <option value="">--Please choose an option--</option>
-            <option value="minorenne">Minorenne</option>
             <option value="maggiorenne">Maggiorenne</option>
+            <option value="minorenne">Minorenne</option>
             <option value="over65">Over65</option>
         </select>
         <button type="button">Calcola</button>
         <button type="reset">Annulla</button>
     </form>
+    <!-- RISULTATO BIGLIETTO  -->
+    <section>
+        <h1 class="text-center mt-4">Il tuo Biglietto</h1>
+        <div>
+            <h2>DETTAGLIO PASSEGGERO</h2>
+
+        </div>
+    </section>
 </body>
 
 </html>

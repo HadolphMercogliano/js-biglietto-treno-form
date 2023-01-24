@@ -22,11 +22,31 @@ const kilometri = parseInt(kilometri_input_el.value);
 // CHIEDI ETA'
 const age_input_el = document.getElementById('age');
 const age = age_input_el.value;
-
+console.log("age " + age);
 // PREZZO INTERO 
 const total_price = price_per_km * kilometri;
-const final_price = ;
-switch (age) {
-    case maggiorenne 
+let final_price = total_price
+// console.log('prezzo base ' + final_price);
 
+switch (age) {
+    case "maggiorenne":
+        final_price = total_price
+        console.log('prezzo maggiorenne base ' + final_price);
+        document.getElementById('passeggero').innerHTML = ('Biglietto standard');
+        break;
+
+    case "minorenne":
+        final_price = (total_price - (total_price * discount_20));
+        console.log('prezzo minorenne ' + final_price);
+        document.getElementById('passeggero').innerHTML = ('Offerta Minorenni');
+        break;
+
+    case "over65":
+        final_price = (total_price - (total_price * discount_40));
+        console.log('prezzo over65: ' + final_price);
+        document.getElementById('passeggero').innerHTML = ('Offerta Over65');
+        break;
 }
+document.getElementById('final_price').innerHTML = (final_price + '€');
+
+

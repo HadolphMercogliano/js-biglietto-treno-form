@@ -11,21 +11,8 @@ const price_per_km = 0.21;
 const discount_20 = 0.2;
 const discount_40 = 0.4;
 
-// CHIEDI NOME 
-let nome_cognome_input_el = document.getElementById('nome_cognome');
-let nome_cognome = nome_cognome_input_el.value;
 
-// CHIEDI KM 
-let kilometri_input_el = document.getElementById('kilometri');
-let kilometri = parseInt(kilometri_input_el.value);
 
-// CHIEDI ETA'
-let age_input_el = document.getElementById('age');
-let age = age_input_el.value;
-console.log("age " + age);
-// PREZZO INTERO 
-let total_price = price_per_km * kilometri;
-let final_price = total_price
 // console.log('prezzo base ' + final_price);
 
 
@@ -34,6 +21,22 @@ console.log(calculate_button);
 calculate_button.addEventListener(
     'click',
     function () {
+        // CHIEDI NOME 
+        let nome_cognome_input_el = document.getElementById('nome_cognome');
+        let nome_cognome = nome_cognome_input_el.value;
+
+        // CHIEDI KM 
+        let kilometri_input_el = document.getElementById('kilometri');
+        let kilometri = parseInt(kilometri_input_el.value);
+
+        // CHIEDI ETA'
+        let age_input_el = document.getElementById('age');
+        let age = age_input_el.value;
+        console.log("age " + age);
+
+        // PREZZO INTERO 
+        let total_price = price_per_km * kilometri;
+        let final_price = total_price
         if (isNaN(kilometri)) {
             alert("immettere correttamente i Km da percorrere")
         }

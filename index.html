@@ -31,21 +31,22 @@
 </head>
 
 <body>
-    <form class="mt-5 ms-5 container" action="#" method="get">
+    <h1 class="mt-5 text-center"> Calcola il prezzo del tuo biglietto</h1>
+    <form class=" container" action="#" method="get">
         <div class="row">
             <!-- NOME E COGNOME -->
-            <div class="col">
+            <div class="col-4">
                 <label class="mb-3" for="nome_cognome"> Nome e Cognome</label><br>
                 <input type="text" id="nome_cognome" required>
             </div>
             <!-- KM DA PERCORRERE -->
-            <div class="col">
+            <div class="col-4">
                 <label class="mb-3" for="kilometri">Km da percorrere</label><br>
                 <input type="number" id="kilometri" required>
             </div>
             <!-- FASCIA D'ETà -->
-            <div class="col">
-                <label class="mb-3" for="age"> Fascia d'età</label>
+            <div class="col-4">
+                <label class="mb-3" for="age"> Fascia d'età</label><br>
                 <select name="age" id="age" required>
                     <option value="">--Please choose an option--</option>
                     <option value="maggiorenne">Maggiorenne</option>
@@ -63,9 +64,9 @@
     <!-- RISULTATO BIGLIETTO  -->
     <section>
         <div class="container">
-            <h1 class="text-center mt-4">Il tuo Biglietto</h1>
-            <div class="row my-3">
-                <h2>DETTAGLIO PASSEGGERO</h2>
+            <h2 class="text-center mt-4">Il tuo Biglietto</h2>
+            <div class="row">
+                <h3 class="my-4">DETTAGLIO PASSEGGERO</h3>
                 <div class="col-4">
                     <h5 class="fw-bold">NOME PASSEGGERO</h5>
                     <span id="passeggero"></span>
